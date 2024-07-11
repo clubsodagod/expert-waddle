@@ -1,0 +1,44 @@
+.attorneyHeroWrapper  {
+
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 60vh;
+    padding: 10vh 3vw  3vh;
+}
+.attorneyHeroTextCtn{
+    padding-top: 0;
+    width: 100%;
+    padding-right: 3vw;
+    max-height: 30vh;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+.h1 {
+    margin-top: 0;
+}
+
+.leftHeroColumnWrapper  {
+    display: flex;
+    flex-direction: row;
+    width: 66.6%;
+    padding-right: 3vw;
+}
+
+.leftHeroColumnWrapper  {
+
+    display: flex;
+    flex-direction: row;
+}
+
+.attorneyImg {
+    width: 25vw;
+    height: 48vh;
+    border-radius: 7.5px;
+}
+
+.attorneyHeroTextBio  {
+    font-size: 1.1rem;
+}

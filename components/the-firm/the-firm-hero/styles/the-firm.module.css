@@ -1,0 +1,76 @@
+.firmHero {
+    width: 100%;
+    height: 60vh;
+    /* background-color: aliceblue; */
+    padding: 10vh 3vw  3vh;
+    display: flex;
+    flex-direction: row;
+}
+
+.heroLeftColumn {
+    display: flex;
+    flex-direction: row;
+    flex-basis: 66.6%;
+    width: 100%;
+}
+
+.firmHeroTextBox {
+    padding-right: 20%;
+}
+.attorneyImgCtn {
+    z-index: -1;
+}
+.attorneyImg {
+    position: absolute;
+    right: 35vw;
+    width: 40vw;
+    height: 48vh;
+    object-fit: cover;
+}
+
+.heroRightColumn {
+    flex-basis: 33.3%;
+    width: 100%;
+}
+
+.bigText {
+    color: #E6D585;
+    text-shadow: 1px 1px #554E31;
+    font-size: 6rem;
+    line-height: 0;
+}
+
+.medText {
+    color: #85A2E6;
+    text-shadow: 1px 1px #455477;
+    font-size: 2rem;
+}
+
+.smallText {
+    color: rgba(242, 242, 242,1);
+    text-shadow: 1px 1px rgb(8, 36, 102);
+    font-size: 1.5rem;
+}
+
+div.headshotAvatar {
+    display: flex;
+    flex-direction: column;
+    gap: 1;
+    justify-content: center;
+    align-items: center;
+    width: 350px;
+    text-align: center;
+    padding: 0 1vw;
+}
+
+.quoteTxt {
+    width: 450px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 30vh;
+}
+
+.headshotBannerCtn {
+    position: absolute;
+}

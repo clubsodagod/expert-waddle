@@ -1,0 +1,56 @@
+.focusedHeadshotAvatarWrapper {
+
+    display: flex;
+    flex-direction: row;
+    width: 33vw;
+    gap: 2vw;
+    justify-content: center;
+    align-items: center;
+}
+
+/* .focusedHeadshotAvatarWrapper::after {
+
+    content: "";
+    position: absolute;
+    width: 33vw;
+    height: 31vh;
+    background-color: rgba(0, 0, 0, 0.35);
+    border-radius: 7.5px;
+} */
+
+.focusedHeadshotAvatarWrapper > * {
+
+    position: relative;
+    z-index: 2;
+}
+
+.focusedHeadshotAvatar {
+    border-radius: 7px 0 0 7px;
+}
+
+.focusedAttorneyTitleText{
+
+    font-size: 2rem;
+    line-height: 0;
+}
+
+.focusedAttorneySubtitleText {
+    font-size: 1.5rem;
+    line-height: 0.25;
+}
+
+
+.quoteText {
+    width: 450px;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.focusedQuoteText {
+    width: 450px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 30vh;
+}

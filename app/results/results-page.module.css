@@ -1,0 +1,6 @@
+.resultsWrapper {
+
+    display: flex;
+    flex-direction: column;
+    padding: 7.5vh 3vw ;
+}

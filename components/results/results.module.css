@@ -1,0 +1,211 @@
+.resultsHeroWrapper {
+
+    display: flex;
+    flex-direction: row;
+}
+
+.leftResultsHeroColumn {
+    flex-basis: 66.6%;
+    width: 100%;
+    z-index: 1;
+}
+.leftResultsHeroColumn h1 {
+color: aqua;
+}
+.rightResultsHeroColumn {
+    flex-basis: 33.3%;
+    width: 100%;
+    z-index: 1;
+}
+
+.resultsScrollableCtnWrapper {
+
+    display: flex;
+    flex-direction: row;
+}
+
+.resultsBgVideo {
+    position: absolute;
+    height: 100vh;
+    width: 100%;
+    object-fit: cover;
+    z-index: -2;
+}
+
+.text {
+    color: white;
+}
+
+h2.text {
+    font-size: 6rem;
+    line-height: 75%;
+}
+
+h3.text {
+    font-size: 3rem;
+}
+
+p.text {
+    font-size: 1.5rem;
+}
+
+.detailsText {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    line-height: 1; /* Adjust based on your desired line height */
+    max-height: calc(1em * 3); /* line-height * number of lines */    
+}
+
+
+
+/*   Results Card *********************** */
+.resultCardWrapper {
+    z-index: 1;
+    border-radius: 7.5px;
+    position: relative;
+    padding: 0 1vw 1vh;
+}
+
+
+
+.resultCardWrapper > * {
+    position: relative;
+    z-index: 2;
+}
+
+
+.resultCardWrapper{
+    width: 33vw;
+    display: flex;
+    flex-direction: column;
+    gap: 1vh;
+}
+
+
+
+.verdictFlexBox {
+     display: flex;
+     flex-direction: row;
+     justify-content: center;
+     align-items: center;
+     gap: 0.5vw;
+}
+.verdictWrapper {
+    display: flexbox;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.verdictWrapper::after {
+    content: "";
+    background-color: rgba(0, 0, 0, 0.55);
+    position: absolute; /* Position the pseudo-element absolutely within the parent */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; /* Make the pseudo-element invisible to mouse events */
+    border-radius: 7.5px;
+}
+
+.verdictWrapper > * {
+    z-index: 2;
+    position: relative;
+}
+
+.verdictLogo {
+
+}
+
+.outcomeText {
+    font-size: 2rem;
+}
+.outcomeIcon {
+    font-size: 3rem;
+}
+
+.verdictText {
+    color: green;
+    font-weight: bold;
+    font-size: 2rem;
+}
+
+.resultCardCtn {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    gap: 1vw;
+}
+
+.resultCardImageWrapper {
+    padding: 0.25vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.resultCardImageWrapper::after {
+    content: "";
+    background-color: rgba(0, 0, 0, 0.55);
+    position: absolute; /* Position the pseudo-element absolutely within the parent */
+    top: 0;
+    left: 0;
+    width: 13.75vw;
+    height: 100%;
+    pointer-events: none; /* Make the pseudo-element invisible to mouse events */
+    border-radius: 7.5px;
+}
+.resultCardImageWrapper > * {
+    z-index: 2;
+    position: relative;
+}
+
+.resultImage {
+    object-fit: cover;
+    border-radius: 7.5px;
+}
+
+.informationWrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 1vh;
+    justify-content: center;
+    position: relative;
+    padding: 0.75vw;
+}
+
+
+
+.informationWrapper::after {
+    content: "";
+    background-color: rgba(0, 0, 0, 0.55);
+    position: absolute; /* Position the pseudo-element absolutely within the parent */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; /* Make the pseudo-element invisible to mouse events */
+    border-radius: 7.5px;
+}
+
+.informationWrapper > * {
+    position: relative;
+    z-index: 2;
+}
+
+.textBoxWrapper {
+
+}
+.caseNameText {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    line-height: 1; /* Adjust based on your desired line height */
+    max-height: calc(1em * 1); /* line-height * number of lines */    
+}

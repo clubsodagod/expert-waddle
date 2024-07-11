@@ -1,4 +1,10 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {};
+const nextConfig = {
+    optimizeFonts: false,
+    images: {
+      loader: 'custom',
+      path: '/',
+    },
+};
 
 export default nextConfig;
