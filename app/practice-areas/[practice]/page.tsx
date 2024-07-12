@@ -11,15 +11,12 @@ import { useRouter } from 'next/router';
 import { useParams, usePathname } from 'next/navigation';
 import PracticeModule from '@/components/practice-areas/practice-module/PracticeModule';
 
-export async function generateStaticParams() {
+export function generateStaticParams() {
   const paths = practices.map(p => ({
     params: { practice: slugify(p.name).toLowerCase() }
   }));
   
-  return {
-    paths,
-    fallback: false, 
-  };
+  return paths
 }
 
 
