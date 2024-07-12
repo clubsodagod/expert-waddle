@@ -9,7 +9,7 @@ const MedText = ({theme}:{theme: string}) => {
     {
       theme && theme
     }
-  }, [])
+  }, [theme])
 
   
 

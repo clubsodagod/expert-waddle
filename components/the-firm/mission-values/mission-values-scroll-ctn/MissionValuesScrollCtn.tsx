@@ -7,8 +7,14 @@ import MissionValueCard from '../hero/building-blocks/MissionValueCard';
 
 
 const MissionValuesScrollCtn: React.FC<{
-    mission: string, coreValues: CoreValue[],
-}> = ({mission, coreValues}) => {
+    mission: string, 
+    coreValues: CoreValue[],
+    missionValueHandler:(value:CoreValue)=>void,
+}> = ({
+    mission, 
+    coreValues,
+    missionValueHandler,
+}) => {
 
   return (
    <div>
@@ -18,9 +24,9 @@ const MissionValuesScrollCtn: React.FC<{
                 coreValues.length > 0 ?
                 coreValues.map((cv:CoreValue, i:number) => {
 
-                    if(i===0) {return <MissionValueCard missionStatement={mission} coreValue={cv} index={i}/>}
+                    if(i===0) {return <MissionValueCard missionStatement={mission} coreValue={cv} index={i} missionValueHandler={missionValueHandler} key={`${cv.value} ${i}`}/>}
 
-                    return <MissionValueCard missionStatement={mission} coreValue={cv} index={i}/>
+                    return <MissionValueCard missionStatement={mission} coreValue={cv} index={i} missionValueHandler={missionValueHandler} key={`${cv.value} ${i}`}/>
                     
                 })
                 :

@@ -12,6 +12,11 @@ const LeftDynamicArrow: React.FC<
   refLeft,
 
 }) => {
+
+  const Click = () => {
+     useClickToScroll({elementId:"",direction:"left", refClick:refLeft})
+     return
+  }
   return (
     <div
     className={styles.leftDynamicArrowCtn}
@@ -26,7 +31,7 @@ const LeftDynamicArrow: React.FC<
             fontSize: "2rem"
           }
         }
-      onClick={()=> {useClickToScroll({direction:"left", refLeft })}} />
+      onClick={()=> {Click}} />
       </div>
     </div>
   )

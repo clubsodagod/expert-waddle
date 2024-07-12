@@ -28,7 +28,7 @@ const MissionValuesHero: React.FC<{
                 <h1
                 className={styles.missionValuesH1}
                 >
-                    The Firm's Mission
+                    The Firm&apos;s Mission
                 </h1>
 
                 <h2

@@ -66,14 +66,16 @@ const ScrollableContainer: React.FC<{children: ReactNode, type: number}> = ({chi
 
   const style = handleDynamicStyles();
   
-
+  const Click = (direction:string) => {
+      useClickToScroll({elementId:"",direction:direction, refClick:scrollContainerRef})
+  }
   return (
     <div
     className={styles[style!]}
     >
 
       <div
-      onClick={()=> {useClickToScroll({elementId:"",direction:"left", refClick:scrollContainerRef})}} 
+      onClick={()=>{Click}} 
       >
         <LeftDynamicArrow refLeft={scrollContainerRef} />
       </div>
@@ -86,8 +88,7 @@ const ScrollableContainer: React.FC<{children: ReactNode, type: number}> = ({chi
       </OverflowContainer>
 
       <div
-      onClick={()=> {useClickToScroll({elementId:"",direction:"right", refClick:scrollContainerRef} ); console.log("works?");
-      }} >
+      onClick={()=>{Click}} >
         <RightDynamicArrow refRight={scrollContainerRef} />
       </div>
       

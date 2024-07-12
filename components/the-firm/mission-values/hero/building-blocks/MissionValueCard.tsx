@@ -8,14 +8,18 @@ const MissionValueCard: React.FC<{
   coreValue:CoreValue, 
   missionStatement:string,
   index:number,
+  missionValueHandler:(value:CoreValue)=>void,
 }> = ({
   coreValue: {
     value,
     videoMobileUrl,
     videoUrl,
+    excerpt,
+
   },
   missionStatement,
   index,
+  missionValueHandler,
 }) => {
   
   const videoRef = useRef<HTMLVideoElement>(null);
@@ -37,7 +41,9 @@ const MissionValueCard: React.FC<{
               <source src={videoUrl} type="video/mp4" />
               Your browser does not support the video tag.
             </video>
-        <div className={styles.missionCardTextWrapper}>
+        <div className={styles.missionCardTextWrapper} onClick={()=>{missionValueHandler({
+          value, videoUrl, videoMobileUrl, excerpt,
+        })}}>
           <h1 className={styles.missionCardH1}>
             {value}
           </h1>          
@@ -66,7 +72,9 @@ const MissionValueCard: React.FC<{
               <source src={videoUrl} type="video/mp4" />
               Your browser does not support the video tag.
             </video>
-        <div className={styles.missionCardTextWrapper}>
+        <div className={styles.missionCardTextWrapper} onClick={()=>{missionValueHandler({
+          value, videoUrl, videoMobileUrl, excerpt,
+        })}}>
           <h1 className={styles.missionCardH1}>
             {value}
           </h1>          

@@ -14,7 +14,7 @@ const TimelineLegacy: React.FC<{}> = ({}) => {
     {
         events.map((e:HistoryLegacy, index:number) => {
             return (
-                <HistoryLegacyCard index={index} event={e} />
+                <HistoryLegacyCard index={index} event={e} key={`${e.title} ${index}`} />
             )
         })
     }

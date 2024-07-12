@@ -23,9 +23,9 @@ const CallToAction = () => {
       >
 
         <h2>
-          When it get's real. <span className={styles.nasser}>Nasser Care</span>.
+          When it get&apos;s real. <span className={styles.nasser}>Nasser Care</span>.
         </h2>
-        <p className={styles.learnMoreText} >It's impossible to predict the unexpected. Have your worries taken care of with Nasser Care.</p>
+        <p className={styles.learnMoreText} >It&apos;s impossible to predict the unexpected. Have your worries taken care of with Nasser Care.</p>
 
       </div>
 

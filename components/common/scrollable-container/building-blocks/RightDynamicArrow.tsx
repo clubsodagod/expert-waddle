@@ -9,6 +9,10 @@ const RightDynamicArrow: React.FC<
   refRight: React.MutableRefObject<HTMLDivElement|null>,
 }
 > = ({refRight}) => {
+
+  const Click = () => {
+    useClickToScroll({elementId:"",direction:"right", refClick:refRight})
+  }
   return (
     <div
     className={styles.rightDynamicArrowCtn}
@@ -24,7 +28,7 @@ const RightDynamicArrow: React.FC<
             color:"blue"
           }
         }
-        onClick={()=> {useClickToScroll({direction:"left", elementId:"", refClick:refRight })}}  />
+        onClick={()=> {Click}}  />
       </div>
       
     </div>

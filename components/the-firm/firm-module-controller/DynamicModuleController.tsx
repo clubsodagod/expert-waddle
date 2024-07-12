@@ -24,7 +24,7 @@ const DynamicFirmModuleController: React.FC<{
       >
           {
             buttons.map((b,i) => (
-              <DynamicModuleButton handleModuleController={handleModuleController} label={b.label} />
+              <DynamicModuleButton key={`${b.label} ${i}`} handleModuleController={handleModuleController} label={b.label} />
             ))
           }
       </DynamicScrollCtn>      

@@ -27,6 +27,7 @@ const TheFirmPage = () => {
   const [view, setView] =useState<number>(0);
   const [cv, setCv] = useState<CoreValue>(firmPage.coreValues[0])
   const [event, setEvent] = useState<number>(8);
+  const [missionValue, setMissionValue] = useState<CoreValue>(firmPage.coreValues[0]);
 
 
   const handleModuleController = (label:string) => {
@@ -76,6 +77,10 @@ const TheFirmPage = () => {
     return setEvent(clickedCard);
   }
 
+  const missionValueHandler = (value:CoreValue) => {
+    setCv(value);
+  }
+
   const handleView = () => {
     switch (view) {
       case 1:
@@ -98,7 +103,7 @@ const TheFirmPage = () => {
   const handleDynamicScrollCtnView = () => {
     switch (view) {
       case 1:
-        return <MissionValuesScrollCtn mission={firmPage.missionStatement} coreValues={firmPage.coreValues} />
+        return <MissionValuesScrollCtn mission={firmPage.missionStatement} coreValues={firmPage.coreValues} missionValueHandler={missionValueHandler}/>
         case 2:
           return <TimelineLegacy  />
           case 3:
@@ -117,8 +122,9 @@ const TheFirmPage = () => {
   useEffect(() => {
 
     {view && view};
+    {cv && cv};
 
-  }, [view])
+  }, [view, cv])
   
 
 

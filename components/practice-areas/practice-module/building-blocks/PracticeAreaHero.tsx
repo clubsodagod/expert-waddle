@@ -1,10 +1,13 @@
+"use client"
 import React from 'react'
 import styles from "../practice-modules.module.css"
 import BigText from './common/BigText'
 import MediumText from './common/MediumText'
 import SmallText from './common/SmallText'
 import CallToAction from '@/components/common/call-to-action/CallToAction'
-import { PracticePage } from '@/public/page-data'
+import { PracticePage, practicePages } from '@/public/page-data'
+import { useParams } from 'next/navigation'
+import slugify from 'slugify'
 
 
 interface PracticeAreaHeroProps {
@@ -12,7 +15,21 @@ interface PracticeAreaHeroProps {
   }
   
 
-const PracticeAreaHero: React.FC<PracticeAreaHeroProps> = ({ practice }) => {
+const PracticeAreaHero: React.FC = () => {
+
+
+  const params = useParams()
+  console.log(params);
+  
+
+  const practiceArea = practicePages.find(
+    (area) => slugify(area.name).toLowerCase() === params?.practice
+  );
+
+  const data: PracticePage = practiceArea!;
+
+  const practice = data;
+  console.log(practice);
 
     const {
         name,
