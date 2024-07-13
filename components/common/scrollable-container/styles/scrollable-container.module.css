@@ -43,6 +43,36 @@
     background-color: #E2EBFF ;
 }
 
+.approchWrapper {
+    position: absolute;
+    width: 100%;
+    height: 40vh;
+    overflow: hidden;
+    padding: 3vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    left: 0;
+    color:lavender;
+    background-color: #E2EBFF ;
+}
+.approachCardOutterWrapper {
+    width: 32vw;
+}
+.historyLegacyWrapper {
+    position: absolute;
+    width: 100%;
+    height: 40vh;
+    overflow: hidden;
+    padding: 3vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    left: 0;
+    color:lavender;
+    background-color: #E2EBFF ;
+}
+
 .resultWrapper {
     position: absolute;
     width: 100%;
@@ -102,4 +132,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.buttonCtn {
+    z-index: 5;
 }

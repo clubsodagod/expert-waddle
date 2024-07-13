@@ -16,7 +16,7 @@ import {
 import ScrollableContainer from '@/components/common/scrollable-container/ScrollableContainer'
 import AttorneyRoster from '@/components/the-firm/attorney-roster/AttorneyRoster'
 import HeadshotAvatar from '@/components/the-firm/headshot-avatar/HeadshotAvatar'
-import { Attorney, attorneys, CoreValue, firmPage, HistoryLegacy } from '@/public/page-data'
+import { Approach, Attorney, attorneys, CoreValue, firmPage, HistoryLegacy } from '@/public/page-data'
 import React, { useEffect, useState } from 'react'
 
 
@@ -28,6 +28,7 @@ const TheFirmPage = () => {
   const [cv, setCv] = useState<CoreValue>(firmPage.coreValues[0])
   const [event, setEvent] = useState<number>(8);
   const [missionValue, setMissionValue] = useState<CoreValue>(firmPage.coreValues[0]);
+  const [approach, setApproach] = useState<Approach>(firmPage.ourApproach[0])
 
 
   const handleModuleController = (label:string) => {
@@ -81,6 +82,10 @@ const TheFirmPage = () => {
     setCv(value);
   }
 
+  const handleApproachView = (clickedCard:number) => {
+    setApproach(firmPage.ourApproach[clickedCard]);
+  }
+
   const handleView = () => {
     switch (view) {
       case 1:
@@ -90,7 +95,7 @@ const TheFirmPage = () => {
           case 3:
             return <AttorneyView attorney={attorney} /> 
             case 4:
-              return <OurApproachHero />
+              return <OurApproachHero approach={approach} />
               case 5:
                 return <CommunityHero />
     
@@ -105,11 +110,11 @@ const TheFirmPage = () => {
       case 1:
         return <MissionValuesScrollCtn mission={firmPage.missionStatement} coreValues={firmPage.coreValues} missionValueHandler={missionValueHandler}/>
         case 2:
-          return <TimelineLegacy  />
+          return <TimelineLegacy handleHistoryLegacyView={handleHistoryLegacyView} />
           case 3:
             return <AttorneyRoster handleAttorneyView={handleAttorneyView} /> 
             case 4:
-              return <OurApproachScrollCtn />
+              return <OurApproachScrollCtn handleApproachView={handleApproachView} />
               case 5:
                 return <CommunityScrollCtn />
     
@@ -123,6 +128,7 @@ const TheFirmPage = () => {
 
     {view && view};
     {cv && cv};
+    {event && event}
 
   }, [view, cv])
   

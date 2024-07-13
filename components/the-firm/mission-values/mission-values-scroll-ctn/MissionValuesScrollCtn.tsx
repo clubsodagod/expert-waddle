@@ -19,7 +19,7 @@ const MissionValuesScrollCtn: React.FC<{
   return (
    <div>
 
-        <DynamicScrollCtn type={3}>
+        <DynamicScrollCtn type={99}>
             {
                 coreValues.length > 0 ?
                 coreValues.map((cv:CoreValue, i:number) => {

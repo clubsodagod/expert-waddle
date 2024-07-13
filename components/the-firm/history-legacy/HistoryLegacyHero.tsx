@@ -1,6 +1,7 @@
 import React from 'react'
 import styles from './history-legacy.module.css'
 import { firmPage, HistoryLegacy } from '@/public/page-data';
+import { CTA } from '@/components';
 
 
 
@@ -12,7 +13,7 @@ const HistoryLegacyHero: React.FC<{
 
   const events = firmPage.historyLegacy;
 
-  const title = event === 8 ? "Our History & Legacy" : events[event].title;
+  const title = event === 8 ? "Our History is Legacy" : events[event].title;
   const description = event === 8 ? "This is a marketable quote about how important it is for Nasser Law to make history." : events[event].description;
 
 
@@ -41,7 +42,7 @@ const HistoryLegacyHero: React.FC<{
       </div>
 
       <div className={styles.rightHistoryLegacyColumn}>
-        
+        <CTA />
       </div>
    </div>
   )

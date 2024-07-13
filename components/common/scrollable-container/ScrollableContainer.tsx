@@ -11,6 +11,7 @@ import { useClickToScroll } from '@/utility/functions'
 const ScrollableContainer: React.FC<{children: ReactNode, type: number}> = ({children, type}) => {
   
   const scrollContainerRef = useRef<HTMLDivElement>(null);
+  const moduleControllerRef = useRef<HTMLDivElement>(null);
   const [scrollPosition, setScrollPosition] = useState({ top: 0, left: 0 });
   const [dynamicStyles, setDynamicStyles] = useState<CSSProperties>({})
 
@@ -45,17 +46,23 @@ const ScrollableContainer: React.FC<{children: ReactNode, type: number}> = ({chi
       case 0:
         
         return "attorneyWrapper"
-        break;
 
           case 1:
             
             return "resultWrapper"
-            break;
 
-              case 2:
-                
-                return "attorneyModuleControllerWrapper"
-                break;
+            case 2:
+              
+              return "attorneyModuleControllerWrapper"
+
+
+              case 3:
+              
+              return "approachWrapper"
+
+                case 5:
+                  
+                  return "historyLegacyWrapper"
   
     default:
           
@@ -67,29 +74,47 @@ const ScrollableContainer: React.FC<{children: ReactNode, type: number}> = ({chi
   const style = handleDynamicStyles();
   
   const Click = (direction:string) => {
+    console.log(direction);
+    
       useClickToScroll({elementId:"",direction:direction, refClick:scrollContainerRef})
   }
+
+  const dynamicRef = () => {
+    switch (type) {
+      case 2: 
+
+        return moduleControllerRef;
+
+    
+      default:
+        return scrollContainerRef
+  };
+  }
+
   return (
     <div
     className={styles[style!]}
     >
 
       <div
-      onClick={()=>{Click}} 
+      onClick={()=>{Click("left")}} 
+      className={styles.buttonCtn}
       >
-        <LeftDynamicArrow refLeft={scrollContainerRef} />
+        <LeftDynamicArrow refLeft={dynamicRef()} />
       </div>
       
 
-      <OverflowContainer refOverflow={scrollContainerRef}>
+      <OverflowContainer refOverflow={dynamicRef()}>
 
         {children}
         
       </OverflowContainer>
 
       <div
-      onClick={()=>{Click}} >
-        <RightDynamicArrow refRight={scrollContainerRef} />
+      onClick={()=>{Click("right")}} 
+      className={styles.buttonCtn}
+      >
+        <RightDynamicArrow refRight={dynamicRef()} />
       </div>
       
     </div>

@@ -5,7 +5,7 @@ import { firmPage, HistoryLegacy } from '@/public/page-data';
 import HistoryLegacyCard from './building-blocks/HistoryLegacyCard';
 
 
-const TimelineLegacy: React.FC<{}> = ({}) => {
+const TimelineLegacy: React.FC<{handleHistoryLegacyView:(clickedCard:number)=>void}> = ({handleHistoryLegacyView}) => {
 
     const events = firmPage.historyLegacy;
 
@@ -14,7 +14,10 @@ const TimelineLegacy: React.FC<{}> = ({}) => {
     {
         events.map((e:HistoryLegacy, index:number) => {
             return (
-                <HistoryLegacyCard index={index} event={e} key={`${e.title} ${index}`} />
+                <div key={`${e.title} ${index}`} onClick={()=>{handleHistoryLegacyView(index)}}>
+                    <HistoryLegacyCard index={index} event={e}/>
+                </div>
+                
             )
         })
     }
