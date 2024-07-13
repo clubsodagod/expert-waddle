@@ -22,6 +22,7 @@ const OurApproachScrollCtn: React.FC<{
               ourApproach.map((a:Approach,i:number) => (
                 <div
                 className={styles.approachCardOutterWrapper}
+                key={`${a.title} ${i}`}
                 >
                   <OurApproachCard approach={a} />
                 </div>
