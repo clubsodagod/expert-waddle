@@ -40,17 +40,17 @@ const OurApproachCard: React.FC<{
          Your browser does not support the video tag.
        </video>
  
-     <div
-     onMouseEnter={()=>{setHovered(!hovered)}}
-     onMouseLeave={()=>{setHovered(!hovered)}}
-     className={styles.approachTextWrapper}
-     >
-       
-       <p className={styles.cardTitle}>{title}</p>
-       
- 
- 
-     </div>
+        <div
+        onMouseEnter={()=>{setHovered(!hovered)}}
+        onMouseLeave={()=>{setHovered(!hovered)}}
+        className={styles.approachTextWrapper}
+        >
+          
+          <p className={styles.cardTitle}>{title}</p>
+          
+    
+    
+        </div>
      
      
     </div>

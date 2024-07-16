@@ -16,7 +16,7 @@ import {
 import ScrollableContainer from '@/components/common/scrollable-container/ScrollableContainer'
 import AttorneyRoster from '@/components/the-firm/attorney-roster/AttorneyRoster'
 import HeadshotAvatar from '@/components/the-firm/headshot-avatar/HeadshotAvatar'
-import { Approach, Attorney, attorneys, CoreValue, firmPage, HistoryLegacy } from '@/public/page-data'
+import { Approach, Attorney, attorneys, CommunityInvolvement, CoreValue, firmPage, HistoryLegacy } from '@/public/page-data'
 import React, { useEffect, useState } from 'react'
 
 
@@ -29,6 +29,7 @@ const TheFirmPage = () => {
   const [event, setEvent] = useState<number>(8);
   const [missionValue, setMissionValue] = useState<CoreValue>(firmPage.coreValues[0]);
   const [approach, setApproach] = useState<Approach>(firmPage.ourApproach[0])
+  const [community, setCommunity] = useState<CommunityInvolvement>(firmPage.community[0]);
 
 
   const handleModuleController = (label:string) => {
@@ -86,6 +87,10 @@ const TheFirmPage = () => {
     setApproach(firmPage.ourApproach[clickedCard]);
   }
 
+  const handleCommunityView = (clickedCard:number) => {
+    setCommunity(firmPage.community[clickedCard]);
+  }
+
   const handleView = () => {
     switch (view) {
       case 1:
@@ -97,7 +102,7 @@ const TheFirmPage = () => {
             case 4:
               return <OurApproachHero approach={approach} />
               case 5:
-                return <CommunityHero />
+                return <CommunityHero community={community} />
     
       default:
         return <FirmHero />
@@ -116,10 +121,10 @@ const TheFirmPage = () => {
             case 4:
               return <OurApproachScrollCtn handleApproachView={handleApproachView} />
               case 5:
-                return <CommunityScrollCtn />
+                return <CommunityScrollCtn handleCommunityView={handleCommunityView} />
     
       default:
-        return 
+        return <AttorneyRoster handleAttorneyView={handleAttorneyView} /> 
     }
   }
 

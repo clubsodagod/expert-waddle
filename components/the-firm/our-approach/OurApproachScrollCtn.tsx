@@ -23,6 +23,7 @@ const OurApproachScrollCtn: React.FC<{
                 <div
                 className={styles.approachCardOutterWrapper}
                 key={`${a.title} ${i}`}
+                onClick={()=>{handleApproachView(i)}}
                 >
                   <OurApproachCard approach={a} />
                 </div>

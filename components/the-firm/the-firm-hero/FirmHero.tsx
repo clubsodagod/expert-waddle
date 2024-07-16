@@ -19,7 +19,7 @@ const FirmHero = () => {
         <div className={styles.firmHeroTextBox}>
           <FirmHeroBigText />
           <FirmHeroMedText />
-          <FirmHeroSmallText />            
+          {/* <FirmHeroSmallText />             */}
         </div>
 
         <div
