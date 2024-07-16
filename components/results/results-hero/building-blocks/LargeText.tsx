@@ -4,9 +4,9 @@ import styles from "../../results.module.css"
 const LargeText = ({}) => {
   return (
     <div>
-      <h2 className={styles.text}>
+      <h1 className={styles.text}>
         Our Record. On Record.
-      </h2>
+      </h1>
     </div>
   )
 }

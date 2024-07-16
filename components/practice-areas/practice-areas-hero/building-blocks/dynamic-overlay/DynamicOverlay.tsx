@@ -21,7 +21,7 @@ export const isMobile = (): boolean => {
 
 
 const DynamicOverlay = () => {
-  const [theme, setTheme] = useState("LAW")
+  const [theme, setTheme] = useState("Nasser Law")
   const [themeSmallText, setThemeSmallText] = useState("For all your legal needs.");
   const [isMobile, setIsMobile] = useState(false);
   const [showButtons, setShowButtons] = useState(true);
@@ -75,7 +75,7 @@ const DynamicOverlay = () => {
               className={styles.practiceLeftColumn}
               >
                 
-                  <BigText />
+                  {/* <BigText /> */}
                   <MediumText practiceArea={theme} />
                   <SmallText theme={themeSmallText}/>
 

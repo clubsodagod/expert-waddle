@@ -34,18 +34,21 @@ div.overlayWrapper {
 }
 
 h1.text  {
-    font-size: 6rem;
-    line-height: 50%;
+    font-size: 9rem;
+    line-height: 75%;
+    color: #DECC50;
+    margin: 0;
 }
 
 
 h2.text  {
     font-size: 4rem;
-    line-height: 50%;
+    margin: 0;
 }
 
 h3.text  {
     font-size: 1.75rem;
+    margin-top: 0;
 }
 
 

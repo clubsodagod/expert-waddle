@@ -16,7 +16,7 @@ import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import { pages as navItems } from '@/public/page-data';
-import { Itim } from 'next/font/google';
+import { Oswald, Hurricane } from 'next/font/google';
 import slugify from 'slugify';
 import Link from 'next/link';
 
@@ -31,9 +31,14 @@ interface Props {
 const drawerWidth = 240;
 
 
-const inter = Itim({
+const inter = Oswald({
   subsets: ['latin'],
   weight: "400"
+});
+
+const hurricane = Hurricane({
+  subsets: ['latin'],
+  weight: '400'
 });
 
 
@@ -66,10 +71,10 @@ export default function Navbar(props: Props) {
   const container = window !== undefined ? () => window().document.body : undefined;
 
   return (
-    <div className={inter.className}>
+    <div className={hurricane.className}>
       <Box sx={{ display: 'flex' }}>
         <CssBaseline />
-        <AppBar component="nav">
+        <AppBar component="nav" className="appBar">
           <Toolbar>
             <IconButton
               color="inherit"
@@ -87,9 +92,10 @@ export default function Navbar(props: Props) {
                 <Typography
                   variant="h6"
                   component="div"
-                  sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' } }}
+                  className={hurricane.className}
+                  sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' }, fontWeight: "bold", fontSize: "3.5rem", color:"#DECC50"}}
                 >
-                  MUI
+                  Nasser Law
                 </Typography>            
               </Link>              
             </Box>

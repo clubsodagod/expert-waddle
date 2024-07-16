@@ -76,7 +76,7 @@ const ResultCard: React.FC<{case:CaseResult}> = ({case: {photo, caseName, caseId
         className={styles.resultCardImageWrapper}
         >
 
-          <Image src={photo!} width={255} height={175} loader={customLoader} alt='' className={styles.resultImage} />
+          <Image unoptimized src={photo!} width={255} height={175} loader={customLoader} alt='' className={styles.resultImage} />
         </div>   
 
 
